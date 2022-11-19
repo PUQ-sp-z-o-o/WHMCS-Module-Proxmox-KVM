@@ -9,11 +9,11 @@ The module allows your customers to provision and manage KVM machines using the 
 
 The module allows you to manage virtually all functions available in Proxmox directly from the WHMCS panel without going to the Proxmox panel. This greatly simplifies and facilitates customer account management, improves customer satisfaction and reduces the number of support requests.
 
-<p class="callout warning">To work properly, the module requires a previously configured Proxmox server or Proxmox cluster (we have prepared [detailed instructions here](https://doc.puq.info/books/proxmoxkvm-whmcs-module/chapter/installation-and-configuration-guide)) and, apart from other requirements, also the available IP address range</p>
+To work properly, the module requires a previously configured Proxmox server or Proxmox cluster (we have prepared [detailed instructions here](https://doc.puq.info/books/proxmoxkvm-whmcs-module/chapter/installation-and-configuration-guide)) and, apart from other requirements, also the available IP address range
 
-<p class="callout info">The module is intended for advanced users, because installation and correct configuration will require knowledge and experience in the field of server and network management and configuration.</p>
+The module is intended for advanced users, because installation and correct configuration will require knowledge and experience in the field of server and network management and configuration.
 
-<p class="callout info">We provide installation service in two variants: module installation and configuration and full implementation. Please [look here](https://panel.puqcloud.com/link.php?id=27) for details. You can [order service here](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm/whmcs-proxmox-kvm-installation-service).</p>
+We provide installation service in two variants: module installation and configuration and full implementation. Please [look here](https://panel.puqcloud.com/link.php?id=27) for details. You can [order service here](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm/whmcs-proxmox-kvm-installation-service).
 
 The module, fully installed and correctly implemented in the system, offers the following functionalities.
 
