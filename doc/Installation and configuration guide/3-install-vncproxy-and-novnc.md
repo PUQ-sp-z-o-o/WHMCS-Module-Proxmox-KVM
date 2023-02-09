@@ -25,10 +25,10 @@ We have used the following libraries
 
 >If you have any difficulties, you can use our public vncproxy server. *We strongly recommend setting up and using your own vncproxy server*. You will retain control over server performance and security
 
->>noVNC WEB proxy server: **vncproxy.puqcloud.com** 
->>noVNC WEB proxy key:**puqcloud** 
->>WEB ports: **80/443** 
->>VNC ports: **5900-5999** 
+>> - noVNC WEB proxy server: **vncproxy.puqcloud.com** 
+>> - noVNC WEB proxy key:**puqcloud** 
+>> - WEB ports: **80/443** 
+>> - VNC ports: **5900-5999** 
 
 >With vncproxy you make a proxy between the client and your **PROXMOX** server.  
 vncproxy must have an unequal stable network with the proxmox server, **ports 5900-5999** are enough  
