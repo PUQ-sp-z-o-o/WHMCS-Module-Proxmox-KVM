@@ -1,0 +1,214 @@
+# Product Configuration
+
+#####  [Order now](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
+
+#### Add new product to WHMCS
+
+```
+System Settings->Products/Services->Create a New Product
+```
+
+In the **Module settings** section, select the **"PUQ ProxmoxKVM"** module
+
+[![image-1663073259616.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663073259616.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663073259616.png)
+
+#### License key
+
+A pre-purchased license key for the "*PUQ ProxmoxKVM*" module. For the module to work correctly, the key must be active
+
+[![image-1663073397433.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663073397433.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663073397433.png)
+
+- - - - - -
+
+#####  
+
+#### Type of virtual machine creation
+
+How will the virtual machine will be cloned from the template  
+**Full Clone** - much more times for deployment.  
+**Linked clone VM** - faster deployment, requires less disk space but cannot run without access to the base VM Template
+
+[![image-1663073575590.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663073575590.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663073575590.png)
+
+- - - - - -
+
+#####  
+
+#### Target node
+
+The node in the cluster on which the virtual machine should be created. If you select the automatic option or the node was unavailable at the time the virtual machine was created, the module will actually select the node with the most real free RAM (not a percentage, but the most free RAM numerically).  
+If a specific node is selected manually, the module does not check the available RAM in any way.
+
+[![image-1663073887426.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663073887426.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663073887426.png)
+
+- - - - - -
+
+#####  
+
+#### Default OS template
+
+Sets the default operating system template. In cases where the template chosen by the client is not available, or if the options with the choice of the operating system are not configured, this template will be used.
+
+[![image-1663074053214.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663074053214.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663074053214.png)
+
+- - - - - -
+
+#####  
+
+#### Backups storage
+
+Data store for backups of virtual machines
+
+<p class="callout info">If you are using a cluster, then you need to have this data store on a network protocol, such as NFS.</p>
+
+[![image-1663074126727.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663074126727.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663074126727.png)
+
+- - - - - -
+
+#####  
+
+#### ISO's storage
+
+Data store for ISO images
+
+<p class="callout info">If you are using a cluster, then you need to have this data store on a network protocol, such as NFS.</p>
+
+[![image-1663074169365.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663074169365.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663074169365.png)
+
+- - - - - -
+
+#####  
+
+#### VM configuration
+
+Basic configuration settings for the virtual machine
+
+[![image-1663074365027.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663074365027.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663074365027.png)
+
+**CPU -** number of CPU cores for a new machine
+
+**RAM** - amount of RAM for a new machine
+
+**OS username -** The user that will be configured in the virtual machine settings will be transferred to the client and will appear in the password change
+
+<p class="callout info">Depending on cloud-init settings in the template. If there is a root user in the template and you also enter root in the service configuration in WHMCS, a password for the root user will be generated when creating the VM. If you enter another user name in this window (but the template does not contain one), it will be created when the machine is created and the password will be sent to the client.</p>
+
+**VM name prefix:** The VM name prefix will be added to the virtual machine name.   
+VM name: **&lt;prefix&gt;**-**&lt;client\_id&gt;**-**&lt;service\_id&gt;**
+
+**First vm id:** ID from which to start searching for a free id for a new virtual machine
+
+**Snapshot lifetime:** After how many days will snapshots be removed automatically
+
+- - - - - -
+
+#####  
+
+#### System disk
+
+<p class="callout success">The system disk is determined by the one that is assigned to the first boot in the virtual machine or template.</p>
+
+System disk options. The system drive is the drive on which the system is installed. Limitations are possible both in terms of bandwidth in megabytes per second, as well as restrictions on the number of I/O operations.
+
+<p class="callout info">Please note that the size of the system disk must be greater than or equal to the size of the system disk in the template.</p>
+
+[![image-1663075790309.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663075790309.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663075790309.png)
+
+- - - - - -
+
+#####  
+
+#### Additional disk
+
+<p class="callout success">The additional drive is the second drive in the virtual machine or template that is not assigned to the first boot option.</p>
+
+*If an additional disk is not created in the virtual machine template, it will be created automatically on the same storage as the system disk.* If you need an additional disk on a different storage than the system disk, it must be then created in the virtual machine <span style="text-decoration: underline;">template</span> on the required storage.
+
+Additional disk options. Limitations are possible both in terms of bandwidth in megabytes per second, as well as restrictions on the number of I/O operations.
+
+[![image-1663076436021.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663076436021.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663076436021.png)
+
+- - - - - -
+
+#####  
+
+#### Network configuration
+
+The section in which you must specify the parameters of the network virtual machine map.
+
+[![image-1663134923952.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663134923952.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663134923952.png)
+
+**Network model -** The network card model of the virtual machine
+
+**Automatic selection bridge/VLAN -**When creating a virtual machine, the IP address will be selected automatically from the list of available IP addresses from the PROXMOX server parameter added in the WHMCS system. Regarding the selected IP address, the network card, bridge and vlan will be configured.
+
+**Network bridge, VLAN -**  If you do not use the Automatic selection, bridge/VLAN. You need to select bridge and VLAN. The IP address will be selected from the list of IP addresses available in this bridge and VLAN in the PROXMOX server address list settings in the WHMCS system.
+
+**DHCP IPv4 -** Whether to use a DHCP server. The IP address will not be selected from the list in the PROXMOX server in the WHMCS system. In this case, firewall rules won't be applied as we don't know IP address.
+
+**Firewall -** Enable firewall on the network card of the virtual machine. *Only works when DHCP is not used.*
+
+**Anti spoofing rules -** *This option only works if you are not using a DHCP server*. It adds allowing rules for incoming and outgoing traffic with the IP address of the virtual machine.
+
+<p class="callout info">For the correct operation of the firewall rules to avoid spoofing the IP address of the virtual machine, it is necessary to configure the firewall on the PROXMOX server, the firewall policy DENY/DENY.</p>
+
+- - - - - -
+
+#####  
+
+#### Integrations configuration
+
+This section contains settings that are responsible for integrating the module with other systems.
+
+[![image-1663136275519.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663136275519.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663136275519.png)
+
+**noVNC WEB proxy server, noVNC WEB proxy key -** VNCPROXY server settings.  
+VNCPROXY and noVNC are used to enable the client to connect to the virtual machine console (Keyboard, Video, Mouse).
+
+<p class="callout success">How to set up a VNCPROXY server is described in[ https://doc.puq.info/books/proxmoxkvm-whmcs-module/page/install-vncproxy-and-novnc](https://doc.puq.info/books/proxmoxkvm-whmcs-module/page/install-vncproxy-and-novnc)</p>
+
+<p class="callout info">For your comfort we provide our public VNCPROXY server with noVNC client. You can use it freely, but we strongly recommend creating your own VNCPROXY server with noVNC client  
+  
+noVNC WEB proxy server: **vncproxy.puqcloud.com**  
+noVNC WEB proxy key: **puqcloud**</p>
+
+**Main domain -** The domain that you use to present the virtual machine. In the WHMCS system, the domain column on the client's product will be filled in the format &lt;prefix&gt;-&lt;client\_id&gt;-&lt;service\_id&gt;.&lt;Main domain&gt;. Also, this parameter will be specified as "search" in the virtual machine in the /etc/resolv.conf file.
+
+**Revdns ticket/RevDNS ticket department -** In case you haven't created a reverse DNS zone record integration. The module can create a ticket when the client changes the reverse zone entry in the settings. You will have to manually process the request.
+
+<p class="callout info">How you can integrate DNS zone records with your DNS server is described here: [https://doc.puq.info/books/proxmoxkvm-whmcs-module/page/synchronization-of-dns-records](https://doc.puq.info/books/proxmoxkvm-whmcs-module/page/synchronization-of-dns-records)</p>
+
+- - - - - -
+
+#####  
+
+#### Email configuration
+
+In this section, you need to select email templates that will be used by the module to communicate with the client.
+
+[![image-1663137423113.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663137423113.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663137423113.png)
+
+**VM is ready -** This email will be sent each time a virtual machine is created. In case of creation and in case of reinstallation. In this email, the client will receive a login and password to access the virtual machine system.
+
+**Reset password -** This email will be sent to the client every time the client uses the password reset function, the client will receive a login and password to access the virtual machine system.
+
+**Backup restored -** This email will be sent to the client every time the client uses the restore virtual machine from backup function.
+
+<p class="callout info">**Sample templates are available here:**  
+[https://doc.puq.info/books/proxmoxkvm-whmcs-module/page/email-template-puqproxmoxkvm-vm-is-ready](https://doc.puq.info/books/proxmoxkvm-whmcs-module/page/email-template-puqproxmoxkvm-vm-is-ready)  
+[https://doc.puq.info/books/proxmoxkvm-whmcs-module/page/email-template-puqproxmoxkvm-reset-password](https://doc.puq.info/books/proxmoxkvm-whmcs-module/page/email-template-puqproxmoxkvm-reset-password)  
+[https://doc.puq.info/books/proxmoxkvm-whmcs-module/page/email-template-puqproxmoxkvm-backup-restored](https://doc.puq.info/books/proxmoxkvm-whmcs-module/page/email-template-puqproxmoxkvm-backup-restored)</p>
+
+<p class="callout info">**Additionally:**   
+[https://doc.puq.info/books/proxmoxkvm-whmcs-module/page/email-template-puqproxmoxvkm-welcome-email](https://doc.puq.info/books/proxmoxkvm-whmcs-module/page/email-template-puqproxmoxvkm-welcome-email)  
+[https://doc.puq.info/books/proxmoxkvm-whmcs-module/page/email-template-puqproxmoxkvm-upgrade-email](https://doc.puq.info/books/proxmoxkvm-whmcs-module/page/email-template-puqproxmoxkvm-upgrade-email)</p>
+
+- - - - - -
+
+#####  
+
+#### Client configuration
+
+In this section, you can configure the client's access rights to manage its virtual machine.
+
+[![image-1663137992356.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663137992356.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663137992356.png)

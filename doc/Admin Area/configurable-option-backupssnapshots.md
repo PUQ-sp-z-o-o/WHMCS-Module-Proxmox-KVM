@@ -1,0 +1,79 @@
+# Configurable Option (Backups/Snapshots)
+
+#####  [Order now](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
+
+In order for the client to have a choice of Backups/Snapshotsin the configuration of the virtual machine. You need to configure the Configurable Option and connect them to the package.
+
+#### Option Group
+
+##### Add new Configurable Option to WHMCS
+
+```
+System Settings->Configurable Option->Create a New Group
+```
+
+[![Proxmox KVM module for WHMCS - adding configurable options](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663139609170.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663139609170.png)
+
+**Enter the group name, description, and select the products you need.**
+
+**Group Name:** Backups/Snapshots
+
+##### After saving, create a new Configurable Option
+
+[![image-1663139696592.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663139696592.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663139696592.png)
+
+#####  
+
+### Price definitions
+
+In this part of the settings, we define individual price lists for selected individual options.
+
+We use the WHMCS standard and add the sign "|" to describe the individual options. The convention presented in our guide must be followed on the left side of the sign. To the right of the sign "|" we give the name that will be displayed in the views for the user (admin, client)
+
+<p class="callout warning">It is very important to enter the names of the options precisely, because they are also used to define the settings and any mistakes or typos will prevent the correct operation of the entire ordering process and starting the virtual machine.</p>
+
+#### Backup definitions
+
+Add an option with a choice of the number of backups
+
+##### Option name
+
+Option Name: **B|Backup**
+
+You can replace the name "**Backup**" with your own, ie: Sicherung, My backup offer etc..
+
+<p class="callout warning">It is important that the option name be started with the prefix "B|"</p>
+
+##### Options
+
+The Options format is this: **number\_of\_backups**|**name** separated by |
+
+You can replace the name "name" with your own.
+
+<p class="callout warning">**It is important that the options be started with the prefix "x |" where "x" represent number of allowed backup**</p>
+
+[![image-1663139775820.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663139775820.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663139775820.png)
+
+#### Snapshot definitions
+
+Add an option with a choice of the number of snapshots
+
+##### Option name
+
+Option Name: **S|Snapshot**
+
+You can replace the name "**Snapshot**" with your own, ie: Fast Snapshots, personal Snapshot etc.
+
+<p class="callout warning">It is important that the option name be started with the prefix **"S|"**</p>
+
+##### Options
+
+The Options format is this: **number\_of\_snapshot**|**name** separated by |
+
+You can replace the name "name" with your own.
+
+<p class="callout warning">**It is important that the options be started with the prefix "x |" where "x" represent number of allowed snapshots**</p>
+
+#####  
+
+[![image-1663141212475.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663141212475.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663141212475.png)
