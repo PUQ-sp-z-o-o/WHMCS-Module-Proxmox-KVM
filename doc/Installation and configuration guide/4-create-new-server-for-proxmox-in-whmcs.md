@@ -6,10 +6,10 @@
 
 For the module to work properly, you must configure the server settings in Your main WHMCS panel. This is the place to set up a proxmox server or proxmox cluster, which will then be used to build KVM machines. Here we define the access data IP ranges and additional settings.
 
-<p class="callout danger">Attention.  
-If you have one server, or you do not use server groups. Van needs to make this server the default. By clicking on it with the mouse.  
-  
-**Make this server the active default for new signups**</p>
+> Attention.  
+If you have one server, or you do not use server groups. Van needs to make this server the default. By clicking on it with the mouse. 
+>
+> **Make this server the active default for new signups**
 
 ### Server creation
 
@@ -61,15 +61,15 @@ vmbr3|0|10.0.25.6|24|10.0.25.1|10.0.10.10,10.0.10.20
 - In the **Server Details** section, select the "**PUQ Proxmox KVM**" module and enter the correct **username** and **password** for the **Proxmox web interface**.
 - To check, click the **"Test connection"** button
 
-<p class="callout info">Note that the username is entered with the Proxmox account type (@pam or @pve)</p>
+>Note that the username is entered with the Proxmox account type (@pam or @pve)
 
-<p class="callout success">During operation, the module will automatically fill in the Access Hash field. This field does not need to be completed.</p>
+>During operation, the module will automatically fill in the Access Hash field. This field does not need to be completed.
 
 [![image-1662467564570.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1662467564570.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1662467564570.png)
 
-<p class="callout danger">**Attention**  
+>**Attention**  
 If you have one server, or you do not use server groups. Van needs to make this server the default. By clicking on it with the mouse.  
-  
-**Make this server the active default for new signups**</p>
+>  
+>**Make this server the active default for new signups**
 
 [![image-1663408279496.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1663408279496.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1663408279496.png)
