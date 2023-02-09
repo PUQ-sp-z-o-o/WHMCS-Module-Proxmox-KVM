@@ -15,11 +15,11 @@ System Settings->Email Templates->Create New Email Template
 
 **Subject:**
 
-<div data-lang="PHP" id="bkmrk-virtual-machine-is-r">```
+```
 Virtual Machine is ready
 ```
 
-</div>**Body:**
+**Body:**
 
 ```
 Dear {$client_name},
