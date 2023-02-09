@@ -6,7 +6,7 @@
 
 Since the primary purpose of the module is to create and manage virtual KVM machines, the machine templates must be properly prepared and available in the Proxmox panel (standalone server or cluster).
 
-<p class="callout warning">You can try to use available templates from the Internet (which support *[clud-init](https://cloud-init.io/)* standard) and they should work fine, but we suggest initially using templates that are created according to our standards. We offer a basic set of images for **[download](https://files.puqcloud.com/).**</p>
+>You can try to use available templates from the Internet (which support *[clud-init](https://cloud-init.io/)* standard) and they should work fine, but we suggest initially using templates that are created according to our standards. We offer a basic set of images for **[download](https://files.puqcloud.com/).**
 
 In order for the automatic installation of the virtual machine to work correctly, You need to prepare virtual machine templates for all operating systems that you want to provide for your customers to choose from.
 
@@ -20,7 +20,8 @@ In order for the automatic installation of the virtual machine to work correctly
 
 - Install the desired operating system on the template virtual machine
 - *During installation, partitions of the virtual machine disk must be divided so that <span style="text-decoration: underline;">the root partition is the last in the lists</span>.* **This is necessary in order for the automatic change of the system partition to work at the moment when the disk of the virtual machine is enlarged.**
-- After installing the operating system, you need to install the [*cloud-init*](https://cloud-init.io/) software suite ​ ```
+- After installing the operating system, you need to install the [*cloud-init*](https://cloud-init.io/) software suite
+    ```
     cloud-initramfs-growroot cloud-init cloud-utils
     ```
 
@@ -46,8 +47,8 @@ If you need any other operating system or certain parameters, you can discuss it
 
 [https://forum.puqcloud.com/](https://forum.puqcloud.com/)
 
-<p class="callout danger">Please note that we provide operating system templates only to demonstrate the functionality of our module.  
-YOUR USE OF THESE OPERATING SYSTEMS IS AT YOUR OWN RISK. WE DO NOT GUARANTEE CORRECT OPERATION AND SAFETY. WE DO NOT RECOMMEND TO USE THEM AS OPERATING SYSTEM TEMPLATES FOR YOUR CLIENTS.</p>
+>Please note that we provide operating system templates only to demonstrate the functionality of our module.  
+YOUR USE OF THESE OPERATING SYSTEMS IS AT YOUR OWN RISK. WE DO NOT GUARANTEE CORRECT OPERATION AND SAFETY. WE DO NOT RECOMMEND TO USE THEM AS OPERATING SYSTEM TEMPLATES FOR YOUR CLIENTS.
 
 #### Download prebuild templates
 
@@ -55,4 +56,9 @@ You can download the templates from the links below.
 
 [https://files.puqcloud.com/](https://files.puqcloud.com/)
 
-<table border="1" id="bkmrk-debian-debian-10-deb" style="border-collapse: collapse; width: 100%;"><tbody><tr><td style="width: 16.6667%;">**Debian**</td><td style="width: 16.6667%;">[Debian-10](https://files.puqcloud.com/Proxmox_OS_Templates/Debian/Debian-10/vzdump-qemu-1010-2022_09_11-13_43_25.vma.zst)</td><td style="width: 16.6667%;">[Debian-11](https://files.puqcloud.com/Proxmox_OS_Templates/Debian/Debian-11/vzdump-qemu-1011-2022_09_11-13_42_41.vma.zst)</td></tr><tr><td style="width: 16.6667%;">**Ubuntu**</td><td style="width: 16.6667%;">[Ubuntu-18](https://files.puqcloud.com/Proxmox_OS_Templates/Ubuntu/Ubuntu-18/vzdump-qemu-1020-2022_09_11-13_41_31.vma.zst)</td><td style="width: 16.6667%;">[Ubuntu-20](https://files.puqcloud.com/Proxmox_OS_Templates/Ubuntu/Ubuntu-20/vzdump-qemu-1021-2022_09_11-13_40_00.vma.zst)</td></tr><tr><td style="width: 16.6667%;">**CentOS**</td><td style="width: 16.6667%;">[CentOS-7](https://files.puqcloud.com/Proxmox_OS_Templates/CentOS/CentOS-7/vzdump-qemu-1030-2022_09_11-13_39_13.vma.zst "CentOS-7")</td><td style="width: 16.6667%;">[CentOS-8](https://files.puqcloud.com/Proxmox_OS_Templates/CentOS/CentOS-8/vzdump-qemu-1031-2022_09_11-13_38_18.vma.zst)</td></tr><tr><td style="width: 16.6667%;">**Proxmox**</td><td style="width: 16.6667%;">[PBS-2.2](http://files.puqcloud.com/Proxmox_OS_Templates/Proxmox/PBS-2-2/vzdump-qemu-1050-2022_09_15-12_53_05.vma.zst)</td><td style="width: 16.6667%;"> </td></tr></tbody></table>
+|Templates | Version  | Version |
+| ------------- |:------------------:| -----:|
+| **Debian**| [Debian-10](https://files.puqcloud.com/Proxmox_OS_Templates/Debian/Debian-10/vzdump-qemu-1010-2022_09_11-13_43_25.vma.zst) | [Debian-11](https://files.puqcloud.com/Proxmox_OS_Templates/Debian/Debian-11/vzdump-qemu-1011-2022_09_11-13_42_41.vma.zst) |
+| **Ubuntu**| [Ubuntu-18](https://files.puqcloud.com/Proxmox_OS_Templates/Ubuntu/Ubuntu-18/vzdump-qemu-1020-2022_09_11-13_41_31.vma.zst) | [Ubuntu-20](https://files.puqcloud.com/Proxmox_OS_Templates/Ubuntu/Ubuntu-20/vzdump-qemu-1021-2022_09_11-13_40_00.vma.zst) |
+| **CentOS**| [CentOS-7](https://files.puqcloud.com/Proxmox_OS_Templates/CentOS/CentOS-7/vzdump-qemu-1030-2022_09_11-13_39_13.vma.zst) | [CentOS-8](https://files.puqcloud.com/Proxmox_OS_Templates/CentOS/CentOS-8/vzdump-qemu-1031-2022_09_11-13_38_18.vma.zst) |
+| **Proxmox**| [PBS-2.2](http://files.puqcloud.com/Proxmox_OS_Templates/Proxmox/PBS-2-2/vzdump-qemu-1050-2022_09_15-12_53_05.vma.zst) | |
