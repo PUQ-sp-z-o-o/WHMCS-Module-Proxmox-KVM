@@ -10,8 +10,8 @@ To connect to the virtual machine console, we will use third-party software.
 
 **noVNC - the open source VNC client -** noVNC is both a VNC client JavaScript library as well as an application built on top of that library. noVNC runs well in any modern browser including mobile browsers (iOS and Android).
 
-- - Project site: [https://novnc.com](https://novnc.com)
-    - Project github: [https://github.com/novnc/noVNC](https://github.com/novnc/noVNC)
+- Project site: [https://novnc.com](https://novnc.com)
+- Project github: [https://github.com/novnc/noVNC](https://github.com/novnc/noVNC)
 
 >As we only use external project we dont take any responsibility for data leak, hacks etc.
 
