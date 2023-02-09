@@ -32,7 +32,7 @@ In this part of the settings, we define individual price lists for selected indi
 
 We use the WHMCS standard and add the sign "|" to describe the individual options. The convention presented in our guide must be followed on the left side of the sign. To the right of the sign "|" we give the name that will be displayed in the views for the user (admin, client)
 
-<p class="callout warning">It is very important to enter the names of the options precisely, because they are also used to define the settings and any mistakes or typos will prevent the correct operation of the entire ordering process and starting the virtual machine.</p>
+>It is very important to enter the names of the options precisely, because they are also used to define the settings and any mistakes or typos will prevent the correct operation of the entire ordering process and starting the virtual machine.
 
 #####  
 
@@ -42,7 +42,7 @@ Option Name: **OS|Operating system**
 
 You can replace the name "**Operating system**" with your own, ie: My offered system.
 
-<p class="callout warning">It is important that the option name be started with the prefix "OS |"</p>
+>It is important that the option name be started with the prefix "OS |"
 
 #####  
 
@@ -54,7 +54,7 @@ You can replace the name "name of system" with your own, ie: Debian, Nextcloud, 
 
 **template\_id** is the number of a specific template machine uploaded to proxmox and recreated as template.
 
-<p class="callout warning">**It is important that the options be started with the prefix "template\_id |"** </p>
+>**It is important that the options be started with the prefix "template\_id |"** 
 
 Please look at this example - as options we have defined: *1010|Debian-10.12*.
 
