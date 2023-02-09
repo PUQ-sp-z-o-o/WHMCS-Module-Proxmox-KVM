@@ -8,7 +8,7 @@ The module allows your customers to provision and manage KVM machines using the 
 
 The module allows you to manage virtually all functions available in Proxmox directly from the WHMCS panel without going to the Proxmox panel. This greatly simplifies and facilitates customer account management, improves customer satisfaction and reduces the number of support requests.
 
-<p class="callout warning">To work properly, the module requires a previously configured and working Proxmox server or Proxmox cluster (we have prepared [detailed instructions here](https://doc.puq.info/books/proxmoxkvm-whmcs-module/chapter/installation-and-configuration-guide)) and, apart from other requirements, also the available IP address range</p>
+<p class="callout warning">To work properly, the module requires a previously configured and working Proxmox server or Proxmox cluster (we have prepared [detailed instructions here](https://doc.puq.info/books/proxmoxkvm-whmcs-module/chapter/installation-and-configuration-guide) ) and, apart from other requirements, also the available IP address range</p>
 
 <p class="callout info">The module is intended for advanced users, because the installation and correct configuration requires knowledge and experience in the management and configuration of servers and the network. Although the instructions are detailed and allow the module to be installed by an intermediate user, we suggest that when installing the module, follow the order in the installation documentation.</p>
 
