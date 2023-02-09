@@ -16,7 +16,7 @@ PHP 7.4
 wget http://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/php74/PUQ_WHMCS-Proxmox-KVM-latest.zip
 ```
 
-<p class="callout info">All versions are available via link: [http://download.puqcloud.com/WHMCS/servers/PUQ\_WHMCS-Proxmox-KVM/](http://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/)</p>
+>All versions are available via link: [http://download.puqcloud.com/WHMCS/servers/PUQ\_WHMCS-Proxmox-KVM/](http://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/)
 
 #####  
 
