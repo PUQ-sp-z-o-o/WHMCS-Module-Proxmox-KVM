@@ -1,0 +1,35 @@
+# Home screen
+
+#####  [Order now](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
+
+#### Basic information on client panel page
+
+The end customer, after logging in to his own customer panel, has access to the following information and options:
+
+- Status and used resources of the virtual machine in real time (*with a 5-second automatic data refresh*).
+- The keys with the following functions are available. 
+    - **Start** and **stop** the virtual machine
+    - Connect to the virtual machine terminal using the **noVNS** WEB client.
+    - **Charts** - switch to real-time virtual machine resource usage statistics. Statistics are presented in the form of well-readable graphs.
+    - **Reinstall** the operating system.
+    - **Snapshot** - go to snapshot management page.
+    - **Backup** - go to backups management page.
+    - **Reset the (root) password** of the virtual machine's operating system.
+    - **Configure the reverse DNS** record is available.
+    - **Mount an ISO** image is available.
+
+[![image-1662452517515.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1662452517515.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1662452517515.png)
+
+<p class="callout info">There are times when not all control options are available. For example, when creating or restoring a backup, or when the options are disabled for a specific client. Unavailable options are deactivated but visible. In this case, their color will be darkened and will not be clickable.</p>
+
+#### Panel view with inactive options
+
+An example of a homepage in case of not available options (disabled options: Charts, Reinstall, Reset passwords, revDNS configuration, ISO mount).
+
+[![image-1662454239436.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1662454239436.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1662454239436.png)
+
+#####  
+
+#### Panel view while backup is in progress
+
+[![image-1662454291765.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1662454291765.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1662454291765.png)
