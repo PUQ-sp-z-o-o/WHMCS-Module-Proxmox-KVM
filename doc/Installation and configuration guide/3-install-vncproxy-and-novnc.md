@@ -13,7 +13,7 @@ To connect to the virtual machine console, we will use third-party software.
 - - Project site: [https://novnc.com](https://novnc.com)
     - Project github: [https://github.com/novnc/noVNC](https://github.com/novnc/noVNC)
 
-<p class="callout info">As we only use external project we dont take any responsibility for data leak, hacks etc.</p>
+>As we only use external project we dont take any responsibility for data leak, hacks etc.
 
 **We use golang to build our products.**
 
@@ -23,14 +23,13 @@ We have used the following libraries
 - [https://github.com/gin-gonic/gin](https://github.com/gin-gonic/gin) (MIT License)
 - [https://pkg.go.dev/golang.org/x/net/websocket](https://pkg.go.dev/golang.org/x/net/websocket) (BSD License)
 
-<p class="callout info">If you have any difficulties, you can use our public vncproxy server. *We strongly recommend setting up and using your own vncproxy server*. You will retain control over server performance and security</p>
+>If you have any difficulties, you can use our public vncproxy server. *We strongly recommend setting up and using your own vncproxy server*. You will retain control over server performance and security
 
-<p class="callout success">noVNC WEB proxy server: **vncproxy.puqcloud.com** noVNC WEB proxy key:**puqcloud** WEB ports: **80/443** VNC ports: **5900-5999** </p>
+>>noVNC WEB proxy server: **vncproxy.puqcloud.com** noVNC WEB proxy key:**puqcloud** WEB ports: **80/443** VNC ports: **5900-5999** 
 
-<p class="callout info">With vncproxy you make a proxy between the client and your **PROXMOX** server.  
+>With vncproxy you make a proxy between the client and your **PROXMOX** server.  
 vncproxy must have an unequal stable network with the proxmox server, **ports 5900-5999** are enough  
 Also, if you use a domain name in connecting the **PROXMOX** seraer to the **WHMCS** system, this domain name must be correctly resolved from the vncproxy server  
-</p>
 
 Let's start with installation.
 
@@ -40,7 +39,7 @@ Let's start with installation.
 
 First, define a domain name for the vncproxy server, in our case it will be **vncproxy.puqcloud.com**
 
-<p class="callout info">Further in the example, we will use the domain name **vncproxy.puqcloud.com**, but in all your configurations you must use your own domain name.</p>
+>Further in the example, we will use the domain name **vncproxy.puqcloud.com**, but in all your configurations you must use your own domain name.
 
 ####  
 
@@ -197,4 +196,4 @@ proxmox-test.uuq.pl59002022/09/11 19:11:08 [vncproxy][debug] ServeWS
 
 The security setting for the server should meet your standards.
 
-<p class="callout warning">Do not forget that for the correct operation of the server, you must allow connections to 80/443 ports. And outgoing connections to the PROXMOX server.</p>
+>Do not forget that for the correct operation of the server, you must allow connections to 80/443 ports. And outgoing connections to the PROXMOX server.
