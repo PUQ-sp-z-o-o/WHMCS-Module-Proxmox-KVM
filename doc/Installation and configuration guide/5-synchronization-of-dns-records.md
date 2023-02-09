@@ -6,10 +6,10 @@ For your convenience, we have prepared a mechanism that generates basic domain e
 
 Setting these entries is not necessary for the correct operation and use of the service.
 
-<p class="callout warning">In this version of the module, we do not have integration of procedures and mechanisms for synchronizing DNS records with various DNS servers. The module returns all IP addresses and DNS records as json using an http request. You need to do the integration with your DNS server yourself.</p>
+>In this version of the module, we do not have integration of procedures and mechanisms for synchronizing DNS records with various DNS servers. The module returns all IP addresses and DNS records as json using an http request. You need to do the integration with your DNS server yourself.
 
-<p class="callout success">We want to introduce automatic integration of DNS records into popular services and DNS servers. But we don't know where to start. You can help us with this. Please visit our forum and post your needs. We will definitely try to implement them in future versions.  
-[https://forum.puqcloud.com/](https://panel.puqcloud.com/link.php?id=9)</p>
+>We want to introduce automatic integration of DNS records into popular services and DNS servers. But we don't know where to start. You can help us with this. Please visit our forum and post your needs. We will definitely try to implement them in future versions.  
+>[https://forum.puqcloud.com/](https://panel.puqcloud.com/link.php?id=9)
 
 ##### How it works
 
@@ -41,7 +41,7 @@ Answer:
 ]
 ```
 
-<p class="callout info">The script does not return entries that contain errors or are empty.</p>
+>The script does not return entries that contain errors or are empty.
 
 With this information, you can import DNS records into your DNS server.
 
