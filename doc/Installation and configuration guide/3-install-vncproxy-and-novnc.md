@@ -1,6 +1,6 @@
 # 3. Install VNCproxy and noVNC
 
-#####  [Order now](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
+#####  [Order now](https://puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
 
 ### Preface
 
@@ -38,7 +38,7 @@ Let's start with installation.
 
 ### Installation process
 
-#### Domain definition
+### Domain definition
 
 First, define a domain name for the vncproxy server, in our case it will be **vncproxy.puqcloud.com**
 
@@ -46,7 +46,7 @@ First, define a domain name for the vncproxy server, in our case it will be **vn
 
 ####  
 
-#### NGINX installation and configuration
+### NGINX installation and configuration
 
 Secondly, you need to install a server with your favorite operating system. In our case, this is the **Debian 11** operating system. You also need to set up a DNS entry on your domain so that it returns the IP address of the server.
 
@@ -64,7 +64,7 @@ sudo apt install certbot nginx python3-certbot-nginx zip -y
 
 ####  
 
-#### Download noVNC client
+### Download noVNC client
 
 ```
 cd /root/
@@ -79,7 +79,7 @@ Now, going to **http://vncproxy.puqcloud.com/vnc.html** will open the noVNC clie
 
 #####  
 
-#### Generate SSL certificate and install it in WEB server using certbot
+### Generate SSL certificate and install it in WEB server using certbot
 
 ```shell
 certbot --nginx -d vncproxy.puqcloud.com
@@ -95,7 +95,7 @@ crontab -e
 0 12 * * * /usr/bin/certbot renew --quiet
 ```
 
-#### NGINX virtual host configuration
+### NGINX virtual host configuration
 
 Make the necessary settings in your domain configuration file in the nginx server
 
@@ -166,7 +166,7 @@ server {
 service nginx restart
 ```
 
-#### Next step is to install vncproxy
+### Next step is to install vncproxy
 
 ```
 apt-get install screen -y
