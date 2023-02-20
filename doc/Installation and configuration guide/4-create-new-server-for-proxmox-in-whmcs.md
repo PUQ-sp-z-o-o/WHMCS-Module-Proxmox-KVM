@@ -1,6 +1,6 @@
 # 4. Create new server for Proxmox in WHMCS
 
-#####  [Order now](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
+#####  [Order now](https://puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
 
 ### Preface
 
@@ -24,7 +24,7 @@ System Settings->Servers->Add New Server
 - Enter the correct **Name** and **Hostname**
 - In field Assigned IP Addresses you must enter a list of IP addresses of virtual machines that will be reserved for this server.
 
-#### Format to follow in the Assigned IP Addresses field.
+### Format to follow in the Assigned IP Addresses field.
 
 To define the available pool of IP addresses, for each available IP number you should enter another line where the data is separated by the "|" separator. Each line with an IP number definition has the following structure:
 
@@ -33,7 +33,7 @@ To define the available pool of IP addresses, for each available IP number you s
 &lt;bridge&gt; - the bridge to which the machine is connected is virtual.  
 &lt;vlan\_tag&gt; - vlan which will be installed on the map of the network machine. In case of not using vlan, you need to set 0
 
-##### Example:
+### Example:
 
 ```
 vmbr0|10|192.168.10.2|24|192.168.10.1|8.8.8.8,1.1.1.1
@@ -54,7 +54,7 @@ vmbr3|0|10.0.25.6|24|10.0.25.1|10.0.10.10,10.0.10.20
 
 [![image-1662467058484.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1662467058484.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1662467058484.png)
 
-##### Enter the correct data in the username and password field  
+### Enter the correct data in the username and password field  
   
 
 
