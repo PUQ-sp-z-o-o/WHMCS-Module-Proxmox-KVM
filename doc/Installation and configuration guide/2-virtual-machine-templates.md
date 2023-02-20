@@ -1,8 +1,8 @@
 # 2. Virtual machine templates
 
-#####  [Order now](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
+#####  [Order now](https://puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
 
-#### Preface
+### Preface
 
 Since the primary purpose of the module is to create and manage virtual KVM machines, the machine templates must be properly prepared and available in the Proxmox panel (standalone server or cluster).
 
@@ -10,13 +10,13 @@ Since the primary purpose of the module is to create and manage virtual KVM mach
 
 In order for the automatic installation of the virtual machine to work correctly, You need to prepare virtual machine templates for all operating systems that you want to provide for your customers to choose from.
 
-##### The physical state of the virtual machine template
+### The physical state of the virtual machine template
 
 - All parameters of the virtual machine must be less than the smallest package you offer to clients. (cpu, RAM, disk size)
 - If you provide a virtual machine with two disks and host these disks on different storages, you need to create these boards in the template of the virtual machine on the necessary data storage, otherwise the additional disk will be created automatically on the same storage as the main disk.
 - You need to add a [*cloud-init*](https://cloud-init.io/) disk in order to automatically configure the virtual machine after cloning, your client parameters (network settings, authorization data)
 
-##### Virtual machine template software
+### Virtual machine template software
 
 - Install the desired operating system on the template virtual machine
 - *During installation, partitions of the virtual machine disk must be divided so that <span style="text-decoration: underline;">the root partition is the last in the lists</span>.* **This is necessary in order for the automatic change of the system partition to work at the moment when the disk of the virtual machine is enlarged.**
@@ -25,12 +25,12 @@ In order for the automatic installation of the virtual machine to work correctly
     cloud-initramfs-growroot cloud-init cloud-utils
     ```
 
-#### We have prepared templates for popular operating systems.
+### We have prepared templates for popular operating systems.
 
 Templates are in the form of a virtual machine backup.  
 In order to use it, you need to download the archive. Then copy it to the Proxmox server and restore the backup.
 
-##### Operating system configuration:
+### Operating system configuration:
 
 - hdd **5 GB** (virtio)
 - disabled **swap**
@@ -41,7 +41,7 @@ In order to use it, you need to download the archive. Then copy it to the Proxmo
 - localization and time zone **Europe/Warsaw**
 - language ****English****
 
-#### Forum
+### Forum
 
 If you need any other operating system or certain parameters, you can discuss it on our forum
 
@@ -50,7 +50,7 @@ If you need any other operating system or certain parameters, you can discuss it
 >Please note that we provide operating system templates only to demonstrate the functionality of our module.  
 YOUR USE OF THESE OPERATING SYSTEMS IS AT YOUR OWN RISK. WE DO NOT GUARANTEE CORRECT OPERATION AND SAFETY. WE DO NOT RECOMMEND TO USE THEM AS OPERATING SYSTEM TEMPLATES FOR YOUR CLIENTS.
 
-#### Download prebuild templates
+### Download prebuild templates
 
 You can download the templates from the links below.
 
