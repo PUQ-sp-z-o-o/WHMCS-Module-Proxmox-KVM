@@ -1,8 +1,8 @@
 # 1. WHMCS setup
 
-#####  [Order now](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
+#####  [Order now](https://puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
 
-##### 1. Download the latest version of the module.
+### 1. Download the latest version of the module.
 
 PHP 8.1
 
@@ -20,7 +20,7 @@ wget http://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/php74/PUQ_
 
 #####  
 
-##### 2. Unzip the archive with the module.
+### 2. Unzip the archive with the module.
 
 ```Powershell
 unzip PUQ_WHMCS-Proxmox-KVM-latest.zip
@@ -28,4 +28,4 @@ unzip PUQ_WHMCS-Proxmox-KVM-latest.zip
 
 #####  
 
-##### 3. Copy "puqNextcloud" from "PUQ\_WHMCS-Proxmox-KVM" to "WHMCS\_WEB\_DIR/modules/servers/"
+### 3. Copy "puqNextcloud" from "PUQ\_WHMCS-Proxmox-KVM" to "WHMCS\_WEB\_DIR/modules/servers/"
