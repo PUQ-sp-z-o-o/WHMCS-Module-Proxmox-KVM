@@ -1,6 +1,6 @@
 # 5. Synchronization of DNS records
 
-#####  [Order now](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
+#####  [Order now](https://puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
 
 For your convenience, we have prepared a mechanism that generates basic domain entries for newly created servers.
 
@@ -11,7 +11,7 @@ Setting these entries is not necessary for the correct operation and use of the 
 >We want to introduce automatic integration of DNS records into popular services and DNS servers. But we don't know where to start. You can help us with this. Please visit our forum and post your needs. We will definitely try to implement them in future versions.  
 >[https://forum.puqcloud.com/](https://panel.puqcloud.com/link.php?id=9)
 
-##### How it works
+### How it works
 
 In order to get all IP addresses and DNS records, you need to send a GET request.
 
@@ -45,11 +45,11 @@ Answer:
 
 With this information, you can import DNS records into your DNS server.
 
-##### Security
+### Security
 
 For unauthorized access in the directory with the dns.php file, there is a .htaccess file in which you can allow access to specific IPs.
 
-##### .htaccess file example
+### .htaccess file example
 
 ```
 order deny,allow
