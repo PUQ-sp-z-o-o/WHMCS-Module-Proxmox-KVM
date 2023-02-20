@@ -1,8 +1,8 @@
 # 7. Troubleshooting
 
-#####  [Order now](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
+#####  [Order now](https://puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
 
-#### CRON
+### CRON
 
 In the event that the module does not work properly and activities are not performed, please check the operation of the CRON service in the first place.
 
