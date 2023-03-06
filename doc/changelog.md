@@ -2,6 +2,13 @@
 
 #####  [Order now](https://puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
 
+### v1.2.1 Released 04-03-2023
+ 
+1. Support for PHP 8.1 and PHP 7.4
+2. Changes made to templates
+
+- - - - - -
+
 ### v1.2 Released 06-01-2023
 
 1. Support WHMCS V8.6
