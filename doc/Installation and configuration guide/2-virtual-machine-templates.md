@@ -41,11 +41,11 @@ In order to use it, you need to download the archive. Then copy it to the Proxmo
 - localization and time zone **Europe/Warsaw**
 - language ****English****
 
-### Forum
+### FAQ
 
 If you need any other operating system or certain parameters, you can discuss it on our forum
 
-[https://forum.puqcloud.com/](https://forum.puqcloud.com/)
+[https://faq.puqcloud.com/](https://faq.puqcloud.com/)
 
 >Please note that we provide operating system templates only to demonstrate the functionality of our module.  
 YOUR USE OF THESE OPERATING SYSTEMS IS AT YOUR OWN RISK. WE DO NOT GUARANTEE CORRECT OPERATION AND SAFETY. WE DO NOT RECOMMEND TO USE THEM AS OPERATING SYSTEM TEMPLATES FOR YOUR CLIENTS.
