@@ -29,6 +29,7 @@ The module, fully installed and correctly implemented in the system, offers the 
     - RAM,
     - disk bandwidth limits such as megabytes per second and the number of I/O operations,
     - network card bandwidth limits.
+    - IPv4 and IPv6
 - Automatically selects an available IP address from a list of IP addresses provided during initial module installation and configuration.
 - Automatically configures the virtual machine system user and password which is then sent by email to customer.
 - Automatically adds rules to the firewall that allow you to avoid spoofing the IP address of the virtual machine.
@@ -44,6 +45,7 @@ The module, fully installed and correctly implemented in the system, offers the 
 - We have prepared templates for the most common distributions but You can create additional ones - we provide brief requirements later in this guide.
 - Module allows when the virtual machine template has 2 disks that can be stored on different network storages. For example, the system disk of the virtual machine is stored on the fast storage, and an additional disk is stored on the slow storage, designed for backups inside the virtual machine.
 - For ISO images, you can use another network storage
+- Configurable Option (Backups/Snapshots/CPU/RAM/IPv4/IPv6)
 
 
 - - - - - -
@@ -54,18 +56,20 @@ Minimal Proxmox version: 7 +
 
 ### Screenshots
 
-[![image-1662446464115.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1662446464115.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1662446464115.png)
+![image](https://github.com/PUQ-sp-z-o-o/WHMCS-Module-Proxmox-KVM/assets/81689153/2efc1e27-0662-48f1-abce-4c20c408fb1c)
 
-[![image-1662446473915.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1662446473915.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1662446473915.png)
+![image](https://github.com/PUQ-sp-z-o-o/WHMCS-Module-Proxmox-KVM/assets/81689153/52a2a142-e938-42df-9748-f939748d3ab9)
 
-[![image-1662446479326.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1662446479326.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1662446479326.png)
+![image](https://github.com/PUQ-sp-z-o-o/WHMCS-Module-Proxmox-KVM/assets/81689153/a905839b-34fd-4792-8576-185e4f0a6b3c)
 
-[![image-1662446484561.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1662446484561.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1662446484561.png)
+![image](https://github.com/PUQ-sp-z-o-o/WHMCS-Module-Proxmox-KVM/assets/81689153/e2ef55be-0691-4c4b-92f5-61b8ce2023b1)
 
-[![image-1662446490042.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1662446490042.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1662446490042.png)
+![image](https://github.com/PUQ-sp-z-o-o/WHMCS-Module-Proxmox-KVM/assets/81689153/030eb710-b3e5-4ce7-83ec-7dd2c3dd37ce)
 
-[![image-1662446499233.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1662446499233.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1662446499233.png)
+![image](https://github.com/PUQ-sp-z-o-o/WHMCS-Module-Proxmox-KVM/assets/81689153/fd56f743-8d6e-4c58-bbae-f4a04cfc9473)
 
-[![image-1662446505531.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1662446505531.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1662446505531.png)
+![image](https://github.com/PUQ-sp-z-o-o/WHMCS-Module-Proxmox-KVM/assets/81689153/48fb7a12-cd3c-48d2-a61f-73e3986558e4)
 
-[![image-1662460646834.png](https://doc.puq.info/uploads/images/gallery/2022-09/scaled-1680-/image-1662460646834.png)](https://doc.puq.info/uploads/images/gallery/2022-09/image-1662460646834.png)
+![image](https://github.com/PUQ-sp-z-o-o/WHMCS-Module-Proxmox-KVM/assets/81689153/865e0a15-58a3-4763-ad6c-58f1e5f4159e)
+
+![image](https://github.com/PUQ-sp-z-o-o/WHMCS-Module-Proxmox-KVM/assets/81689153/d97c7c7d-e7f8-4d1c-a5d9-8add40f98d94)

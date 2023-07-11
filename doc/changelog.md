@@ -2,6 +2,21 @@
 
 #####  [Order now](https://puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
 
+### v1.3 Released 11-07-2023
+1. Integration with PUQ customization(FREE)
+2. IPv6 support (required PUQ customization)
+3. Ability to create virtual machines with IPv6 only
+4. Added pools of IP addresses (required PUQ customization)
+5. Added ability to define multiple IPv4 and IPv6 addresses
+6. Added configuration options that allow you to configure the amount of RAM, CPU, IPv4, IPv6.
+7. Added a check if the deployment of the machine during the cloning failed, then the cloning will start again.
+8. The design of the main screen of the client area has been changed. (dropdown list with VM network settings)
+9. Changed the display of virtual machine graphs in the Admin zone (3 graphs in a row)
+10. When ordering a service, the fields for entering name servers have been removed
+11. Added virtual machine templates (Debian 12, Ubuntu 22.04)
+
+- - - - - -
+
 ### v1.2.1 Released 04-03-2023
  
 1. Support for PHP 8.1 and PHP 7.4
