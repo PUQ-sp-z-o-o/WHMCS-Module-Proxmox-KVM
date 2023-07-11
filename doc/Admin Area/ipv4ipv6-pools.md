@@ -1,0 +1,18 @@
+# IPv4/IPv6 Pools
+
+##### Starting with version 1.3, the module started supporting IPv4/IPv6 pools.
+
+**In order to manage pools of IPv4 and IPv6 IP addresses, you need to install the PUQ Customization addon module (free)**  
+  
+[https://doc.puq.info/books/puq-customization-whmcs-addon](https://doc.puq.info/books/puq-customization-whmcs-addon)  
+[https://download.puqcloud.com/WHMCS/addons/PUQ-Customization/](https://download.puqcloud.com/WHMCS/addons/PUQ-Customization/)
+
+[![image-1689071770666.png](https://doc.puq.info/uploads/images/gallery/2023-07/scaled-1680-/image-1689071770666.png)](https://doc.puq.info/uploads/images/gallery/2023-07/image-1689071770666.png)
+
+[![image-1689071770698.png](https://doc.puq.info/uploads/images/gallery/2023-07/scaled-1680-/image-1689071770698.png)](https://doc.puq.info/uploads/images/gallery/2023-07/image-1689071770698.png)
+
+[![image-1689071770713.png](https://doc.puq.info/uploads/images/gallery/2023-07/scaled-1680-/image-1689071770713.png)](https://doc.puq.info/uploads/images/gallery/2023-07/image-1689071770713.png)
+
+[![image-1689071770729.png](https://doc.puq.info/uploads/images/gallery/2023-07/scaled-1680-/image-1689071770729.png)](https://doc.puq.info/uploads/images/gallery/2023-07/image-1689071770729.png)
+
+[![image-1689071770765.png](https://doc.puq.info/uploads/images/gallery/2023-07/scaled-1680-/image-1689071770765.png)](https://doc.puq.info/uploads/images/gallery/2023-07/image-1689071770765.png)
