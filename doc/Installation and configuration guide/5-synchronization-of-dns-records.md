@@ -2,6 +2,18 @@
 
 #####  [Order now](https://puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
 
+### Starting with version 1.4, the module started supporting **DNS Synchronization** (cloudflare.com, HestiaCP)
+
+In order to manage DNS zones to synchronization , you need to install the **PUQ Customization addon module (free)**
+
+https://doc.puq.info/books/puq-customization-whmcs-addon/page/dns-zones
+https://doc.puq.info/books/puq-customization-whmcs-addon/chapter/module-puqproxmoxkvm
+https://doc.puq.info/books/puq-customization-whmcs-addon
+
+https://download.puqcloud.com/WHMCS/addons/PUQ-Customization/
+
+- - - - - -
+
 For your convenience, we have prepared a mechanism that generates basic domain entries for newly created servers.
 
 Setting these entries is not necessary for the correct operation and use of the service.
@@ -9,7 +21,7 @@ Setting these entries is not necessary for the correct operation and use of the 
 >In this version of the module, we do not have integration of procedures and mechanisms for synchronizing DNS records with various DNS servers. The module returns all IP addresses and DNS records as json using an http request. You need to do the integration with your DNS server yourself.
 
 >We want to introduce automatic integration of DNS records into popular services and DNS servers. But we don't know where to start. You can help us with this. Please visit our forum and post your needs. We will definitely try to implement them in future versions.  
->[https://forum.puqcloud.com/](https://panel.puqcloud.com/link.php?id=9)
+>[https://faq.puqcloud.com/](https://panel.puqcloud.com/link.php?id=9)
 
 ### How it works
 

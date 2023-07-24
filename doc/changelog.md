@@ -2,6 +2,17 @@
 
 #####  [Order now](https://puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
 
+### v1.4 Released 24-07-2023
+ 
+1. Added synchronization of Forward DNS, Revdns zones (required PUQ customization)
+    * cloudflare.com
+    * HestiaCP
+2. The function of changing the package is transferred to Cron
+3. Fixes a bug related to the default operating system template.
+4. Added Virtual Machine Templates (CentOS 9)
+
+- - - - - -
+
 ### v1.3 Released 11-07-2023
 1. Integration with PUQ customization(FREE)
 2. IPv6 support (required PUQ customization)

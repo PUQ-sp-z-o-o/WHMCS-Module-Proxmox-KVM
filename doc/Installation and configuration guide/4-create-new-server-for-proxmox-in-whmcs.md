@@ -24,6 +24,18 @@ System Settings->Servers->Add New Server
 - Enter the correct **Name** and **Hostname**
 - In field Assigned IP Addresses you must enter a list of IP addresses of virtual machines that will be reserved for this server.
 
+- - - - - -
+
+>Starting with version 1.3, the module started supporting IPv4/IPv6 pools.
+>In order to manage pools of IPv4 and IPv6 IP addresses, you need to install the PUQ Customization addon module (free)
+>https://doc.puq.info/books/puq-customization-whmcs-addon/page/ip-pools
+>https://doc.puq.info/books/puq-customization-whmcs-addon/chapter/module-puqproxmoxkvm
+>https://doc.puq.info/books/puq-customization-whmcs-addon
+>
+>https://download.puqcloud.com/WHMCS/addons/PUQ-Customization/
+
+- - - - - -
+
 ### Format to follow in the Assigned IP Addresses field.
 
 To define the available pool of IP addresses, for each available IP number you should enter another line where the data is separated by the "|" separator. Each line with an IP number definition has the following structure:
