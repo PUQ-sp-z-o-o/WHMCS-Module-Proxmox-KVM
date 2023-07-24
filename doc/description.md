@@ -4,17 +4,23 @@
 
 ### Preface
 
+>Starting with version 1.3 **ProxmoxKVM WHMCS module**, integrates with the **PUQ Customization WHMCS Addon (FREE)** for a thinner tuning of parameters and configurations.
+>Check out the PUQ Customization WHMCS Addon
+>
+>https://doc.puq.info/books/puq-customization-whmcs-addon
+>https://download.puqcloud.com/WHMCS/addons/PUQ-Customization/
+
 The module allows your customers to provision and manage KVM machines using the Proxmox server or Proxmox cluster.
 
 The module allows you to manage virtually all functions available in Proxmox directly from the WHMCS panel without going to the Proxmox panel. This greatly simplifies and facilitates customer account management, improves customer satisfaction and reduces the number of support requests.
 
-To work properly, the module requires a previously configured and working Proxmox server or Proxmox cluster (we have prepared [detailed instructions here](https://doc.puq.info/books/proxmoxkvm-whmcs-module/chapter/installation-and-configuration-guide)) and, apart from other requirements, also the available IP address range
+>To work properly, the module requires a previously configured and working Proxmox server or Proxmox cluster (we have prepared [detailed instructions here](https://doc.puq.info/books/proxmoxkvm-whmcs-module/chapter/installation-and-configuration-guide)) and, apart from other requirements, also the available IP address range
 
-The module is intended for advanced users, because the installation and correct configuration requires knowledge and experience in the management and configuration of servers and the network. Although the instructions are detailed and allow the module to be installed by an intermediate user, we suggest that when installing the module, follow the order in the installation documentation.
+>The module is intended for advanced users, because the installation and correct configuration requires knowledge and experience in the management and configuration of servers and the network. Although the instructions are detailed and allow the module to be installed by an intermediate user, we suggest that when installing the module, follow the order in the installation documentation.
 
-For technical reasons, the module will not support LVM-based storage(Due to the fact that they do not use in the cluster as a shared storage).
+>For technical reasons, the module will not support LVM-based storage(Due to the fact that they do not use in the cluster as a shared storage).
 
-We provide installation service in two variants: module installation and configuration and full implementation. Please [look here](https://panel.puqcloud.com/link.php?id=27) for details. You can [order service here](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm/whmcs-proxmox-kvm-installation-service).
+>We provide installation service in two variants: module installation and configuration and full implementation. Please [look here](https://panel.puqcloud.com/link.php?id=27) for details. You can [order service here](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm/whmcs-proxmox-kvm-installation-service).
 
 The module, fully installed and correctly implemented in the system, offers the following functionalities.
 
@@ -30,6 +36,7 @@ The module, fully installed and correctly implemented in the system, offers the 
     - disk bandwidth limits such as megabytes per second and the number of I/O operations,
     - network card bandwidth limits.
     - IPv4 and IPv6
+    - DNS records forward and reverse
 - Automatically selects an available IP address from a list of IP addresses provided during initial module installation and configuration.
 - Automatically configures the virtual machine system user and password which is then sent by email to customer.
 - Automatically adds rules to the firewall that allow you to avoid spoofing the IP address of the virtual machine.
