@@ -10,6 +10,7 @@ The module allows your customers to provision and manage KVM machines on Proxmox
 >Check out the PUQ Customization WHMCS Addon
 >
 >https://doc.puq.info/books/puq-customization-whmcs-addon
+>
 >https://download.puqcloud.com/WHMCS/addons/PUQ-Customization/
 
 The module allows your customers to provision and manage KVM machines using the Proxmox server or Proxmox cluster.
