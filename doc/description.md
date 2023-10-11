@@ -38,6 +38,7 @@ The module, fully installed and correctly implemented in the system, offers the 
     - network card bandwidth limits.
     - IPv4 and IPv6
     - DNS records forward and reverse
+- Module supports multilingualism **(Arabic, Azerbaijani, Catalan, Chinese, Croatian, Czech, Danish, Dutch, English, Estonian, Farsi, French, German, Hebrew, Hungarian, Italian, Macedonian, Norwegian, Polish, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian)**
 - Automatically selects an available IP address from a list of IP addresses provided during initial module installation and configuration.
 - Automatically configures the virtual machine system user and password which is then sent by email to customer.
 - Automatically adds rules to the firewall that allow you to avoid spoofing the IP address of the virtual machine.
