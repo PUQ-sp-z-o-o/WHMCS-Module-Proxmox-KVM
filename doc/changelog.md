@@ -6,7 +6,7 @@
 
 1. Fixed a bug with the problem of assigning an IPv6 address in some cases the error "No IPv6 addresses available" was displayed
 2. Fixes in client zone templates
-3. Changed the display of the product in the admin area
+3. Changed the display of the product in the admin area 
 4. Added metrics for incoming and outgoing traffic, charging is possible
 
 - - - - - -
