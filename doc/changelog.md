@@ -2,6 +2,15 @@
 
 #####  [Order now](https://puqcloud.com/index.php?rp=/store/whmcs-module-proxmox-kvm) | [Dowload](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Proxmox-KVM/) | [FAQ](https://faq.puqcloud.com/)
 
+### v1.5 Released 04-03-2024
+
+1. Fixed a bug with the problem of assigning an IPv6 address in some cases the error "No IPv6 addresses available" was displayed
+2. Fixes in client zone templates
+3. Changed the display of the product in the admin area
+4. Added metrics for incoming and outgoing traffic, charging is possible
+
+- - - - - -
+
 ### v1.4.5 Released 11-10-2023
 
 1. Support WHMCS v8.8.0
