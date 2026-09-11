@@ -42,6 +42,9 @@ This section controls the core virtual machine parameters applied during provisi
 | **Snapshot schedule mode** *(new in v4.0)* | When enabled, snapshots operate on an automated schedule with automatic FIFO rotation (identical to backups). The client sets up weekly schedules, and older snapshots are rotated when the quota is reached. When enabled, **Snapshot lifetime** is ignored and disabled. | `Off` |
 | **Snapshot lifetime** | Automatic cleanup period for client-created snapshots. Active only when **Snapshot schedule mode** is disabled. The cron job removes snapshots older than the selected duration. Set to **Don't remove** to keep snapshots indefinitely. Automatically disabled when schedule mode is enabled. | `Don't remove` |
 
+> [!TIP]
+> **Need to generate templates?** Check out the [PUQ PVE OS Builder](https://github.com/puqcloud/PVE-OS-Builder) — our official tool for instantly generating WHMCS-ready cloud-init templates for Debian, Ubuntu, AlmaLinux, and more.
+
 ### VM Name Rule Macros
 
 The following macros can be used in the **VM name rule** field:

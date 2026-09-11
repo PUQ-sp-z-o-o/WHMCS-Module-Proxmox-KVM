@@ -7,9 +7,9 @@
 
 | Requirement | Supported Versions |
 |-------------|--------------------|
-| **WHMCS** | 8.x+, 9.x+. |
+| **WHMCS** | 8.x+, 9.x+ |
 | **PHP** | 7.4, 8.1, 8.2, 8.3, 8.4 |
-| **Proxmox VE** | 7.x+, 8.x+ |
+| **Proxmox VE** | 8.x+, 9.x+ |
 | **ionCube Loader** | v15+ |
 
 ## Required PHP Extensions

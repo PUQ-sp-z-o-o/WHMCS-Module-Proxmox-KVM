@@ -28,7 +28,67 @@ Cloud-init is **required** for automatic VM configuration. The module uses cloud
 
 Without cloud-init, the module cannot automatically configure the VM's network and credentials after cloning.
 
-## Creating a Template
+## 🚀 Automated Template Creation (Recommended)
+
+The easiest and officially recommended way to create Proxmox VM templates for the WHMCS module is by using **[PUQ PVE OS Builder](https://github.com/puqcloud/PVE-OS-Builder)** — a dedicated project created specifically for this purpose. 
+
+Built for infrastructure automation and WHMCS integration, PVE OS Builder is a containerized application that completely automates the creation of Proxmox VE `.vma.zst` templates.
+
+![*PUQ PVE OS Builder Dashboard*](../img/pve-os-builder-dashboard.png)
+
+### Why use PVE OS Builder?
+
+- **Fully Automated**: Download official cloud base images (Debian, Ubuntu, AlmaLinux, Rocky, CentOS, Alpine) and turn them into WHMCS-ready templates automatically.
+- **Pre-configured Profiles**: Applies required settings out of the box, including Root SSH Login, Cloud-Init Growroot, and proper machine ID resets.
+- **Security Hardening**: Built-in support for Fail2ban, custom SSH ports, unattended security upgrades, and arbitrary Bash post-install scripts.
+- **Zero-Download NFS Integration**: Connect your Proxmox VE cluster directly to the container's built-in NFS server for instant 1-click restore.
+
+### Quick Start Guide
+
+#### 1. Download Base Images
+Navigate to **Base OS Images** to pull official upstream images directly into your volume storage.
+
+![*Base Images Catalog*](../img/pve-os-builder-base-images.png)
+
+#### 2. Customize OS Profiles
+Profiles dictate exactly how your virtual machine templates are configured. Create a profile and ensure the **PUQ Baseline** settings are configured correctly for WHMCS.
+
+![*OS Profiles Overview*](../img/pve-os-builder-os-profiles.png)
+
+![*Profile Baseline*](../img/pve-os-builder-profile-baseline.png)
+
+> [!TIP]
+> You can also configure QEMU hardware, Cloud-Init, Sysctl tuning, and Security Hardening in the other tabs.
+
+#### 3. Launch Build Matrix
+In the **Build Studio**, select your base images and regional groups to launch a build matrix. The builder handles all configurations via `virt-customize` instantly without even booting the OS.
+
+![*Launch Matrix Build*](../img/pve-os-builder-launch-matrix.png)
+
+![*Build Console*](../img/pve-os-builder-build-console.png)
+
+#### 4. Connect to Proxmox via NFS
+Once builds are complete, they are stored as standard `.vma.zst` archives. The best way to use them is to connect your Proxmox VE cluster to the Builder's built-in NFS server.
+
+1. In Proxmox GUI, go to **Datacenter** → **Storage** → **Add** → **NFS**.
+2. Enter the **IP Address** of your Builder container.
+3. Use `/export` as the Export path.
+4. Select **VZDump backup file** as the Content type.
+
+![*Proxmox NFS Add Dialog*](../img/pve-os-builder-proxmox-nfs-add.png)
+
+Your new templates will instantly appear in Proxmox, ready for restore via `qmrestore` or the GUI!
+
+![*Proxmox Backups List*](../img/pve-os-builder-proxmox-backups-list.png)
+
+> [!IMPORTANT]
+> For full installation instructions, Docker Compose files, and detailed usage documentation of the builder itself, visit the **[PUQ PVE OS Builder GitHub Repository](https://github.com/puqcloud/PVE-OS-Builder)**.
+
+---
+
+## Manual Template Creation
+
+If you prefer not to use the automated OS Builder, you can create templates manually.
 
 ### Step 1: Create a Base VM
 

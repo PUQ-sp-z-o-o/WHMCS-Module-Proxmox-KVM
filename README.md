@@ -35,6 +35,7 @@ If you don't feel comfortable performing the installation yourself, PUQcloud off
 - **DNS zone management** — Cloudflare and HestiaCP integration for forward and reverse DNS automation
 - **noVNC web console** — secure browser-based console access via VNC proxy with one-time authentication links
 - **Cloud-init support** — automatic hostname, IP, DNS, user, and password configuration via cloud-init
+- **Automated Template Creation** — official support for [PUQ PVE OS Builder](https://github.com/puqcloud/PVE-OS-Builder) to instantly generate WHMCS-ready Proxmox templates
 - **ISO mounting** — mount and unmount ISO images from Proxmox storage for OS installation
 - **Resource usage charts** — real-time CPU, RAM, disk I/O, and network usage graphs with historical data
 - **Usage-based billing** — network traffic metering (inbound/outbound) with WHMCS Metric Billing
@@ -51,7 +52,7 @@ If you don't feel comfortable performing the installation yourself, PUQcloud off
 |-------------|---------|
 | **WHMCS** | 8.x+, 9.x+. |
 | **PHP** | 7.4, 8.1, 8.2, 8.3, 8.4 |
-| **Proxmox VE** | 7.x+, 8.x+ |
+| **Proxmox VE** | 8.x+, 9.x+ |
 | **ionCube Loader** | v15+ |
 
 ---
@@ -77,6 +78,7 @@ The **Addon Module** is required for the server module to function. It manages:
 - **Product page:** [https://puqcloud.com/whmcs-module-proxmox-kvm.php](https://puqcloud.com/whmcs-module-proxmox-kvm.php)
 - **Documentation:** [https://doc.puq.info/books/proxmoxkvm-whmcs-module](https://doc.puq.info/books/proxmoxkvm-whmcs-module)
 - **GitHub:** [https://github.com/puqcloud/WHMCS-Module-Proxmox-KVM](https://github.com/puqcloud/WHMCS-Module-Proxmox-KVM)
+- **Template Builder:** [https://github.com/puqcloud/PVE-OS-Builder](https://github.com/puqcloud/PVE-OS-Builder)
 - **Support:** [https://puqcloud.com/submitticket.php](https://puqcloud.com/submitticket.php?step=2&deptid=1)
 - **Community:** [https://community.puqcloud.com/](https://community.puqcloud.com/)
 
