@@ -28,63 +28,131 @@ Cloud-init is **required** for automatic VM configuration. The module uses cloud
 
 Without cloud-init, the module cannot automatically configure the VM's network and credentials after cloning.
 
-## 🚀 Automated Template Creation (Recommended)
+## 🚀 Automated Template Creation with PUQ PVE OS Builder (Recommended)
 
-The easiest and officially recommended way to create Proxmox VM templates for the WHMCS module is by using **[PUQ PVE OS Builder](https://github.com/puqcloud/PVE-OS-Builder)** — a dedicated project created specifically for this purpose. 
+The easiest and officially recommended way to create Proxmox VM templates for the WHMCS module is by using **[PUQ PVE OS Builder](https://github.com/puqcloud/PVE-OS-Builder)** — a dedicated, containerized application designed to automate the creation of Proxmox VE `.vma.zst` templates. Perfect for infrastructure automation and WHMCS integration, this tool allows you to:
+- Download official cloud base images (Debian, Ubuntu, AlmaLinux, Rocky, CentOS, Alpine).
+- Customize OS Profiles (QEMU hardware, Cloud-Init, sysctl tuning, security hardening).
+- Automate localization and regional repository mirrors.
+- Run concurrent build matrices.
+- Mount directly into Proxmox VE via NFS for instant restore.
 
-Built for infrastructure automation and WHMCS integration, PVE OS Builder is a containerized application that completely automates the creation of Proxmox VE `.vma.zst` templates.
+### 🔐 1. Login & Access
 
-![*PUQ PVE OS Builder Dashboard*](../img/pve-os-builder-dashboard.png)
+Access the PVE OS Builder via your configured Docker port.
 
-### Why use PVE OS Builder?
+![*Login Screen*](../img/pve-os-builder-login.png)
 
-- **Fully Automated**: Download official cloud base images (Debian, Ubuntu, AlmaLinux, Rocky, CentOS, Alpine) and turn them into WHMCS-ready templates automatically.
-- **Pre-configured Profiles**: Applies required settings out of the box, including Root SSH Login, Cloud-Init Growroot, and proper machine ID resets.
-- **Security Hardening**: Built-in support for Fail2ban, custom SSH ports, unattended security upgrades, and arbitrary Bash post-install scripts.
-- **Zero-Download NFS Integration**: Connect your Proxmox VE cluster directly to the container's built-in NFS server for instant 1-click restore.
+Log in using the credentials defined in your Docker environment variables (`ADMIN_USER` and `ADMIN_PASSWORD`). If you need public template downloads without authentication, you can access the Public Template Repository.
 
-### Quick Start Guide
+### 📊 2. Dashboard
 
-#### 1. Download Base Images
-Navigate to **Base OS Images** to pull official upstream images directly into your volume storage.
+The Dashboard provides a unified view of your system's telemetry and status.
+
+![*Dashboard*](../img/pve-os-builder-dashboard.png)
+
+- **Proxmox VE Native Storage (NFS)**: Monitor the status of the built-in NFS server and the number of ready templates.
+- **Resource Allocation**: Track disk space usage for your base images cache and ready templates repository.
+- **Packaging Utilities**: Verify that required tools (`qemu-img`, `vma`, `zstd`, `virt-customize`) are packaged and ready.
+- **Recent Builds**: Quickly see the status of your latest matrix jobs.
+
+### 📥 3. Base OS Images
+
+Before building templates, you need base images. The Base OS Images Catalog connects to official upstream repositories.
 
 ![*Base Images Catalog*](../img/pve-os-builder-base-images.png)
 
-#### 2. Customize OS Profiles
-Profiles dictate exactly how your virtual machine templates are configured. Create a profile and ensure the **PUQ Baseline** settings are configured correctly for WHMCS.
+- **One-Click Download**: Pull images directly into your volume storage.
+- **Real-Time Progress**: View live download progress speeds.
+- **Supported Families**: Debian, Ubuntu, AlmaLinux, Rocky, CentOS, Alpine Linux.
+
+### ⚙️ 4. OS Customization Profiles
+
+Profiles dictate exactly how your virtual machine templates are configured and hardened.
 
 ![*OS Profiles Overview*](../img/pve-os-builder-os-profiles.png)
 
-![*Profile Baseline*](../img/pve-os-builder-profile-baseline.png)
+Create tailored profiles for different operating systems and use cases (e.g., WHMCS standard nodes vs. lightweight Alpine containers).
 
-> [!TIP]
-> You can also configure QEMU hardware, Cloud-Init, Sysctl tuning, and Security Hardening in the other tabs.
+#### Profile Configuration Tabs
 
-#### 3. Launch Build Matrix
-In the **Build Studio**, select your base images and regional groups to launch a build matrix. The builder handles all configurations via `virt-customize` instantly without even booting the OS.
+1. **PUQ Baseline**: Set the root password, disk size, and enable mandatory WHMCS directives like Root SSH Login, Cloud-Init Growroot, and Machine ID resets.
+   ![*Profile Baseline*](../img/pve-os-builder-profile-baseline.png)
+2. **QEMU Hardware**: Configure `cpu` type (host vs x86-64-v2), Disk Async I/O (io_uring), Discard/TRIM, SSD Emulation, and Network Firewalls.
+   ![*QEMU Hardware*](../img/pve-os-builder-profile-qemu.png)
+3. **Cloud-Init & Access**: Define the default username, inject SSH public keys, disable password expiry, and enforce fast Cloud-Init datasources.
+   ![*Cloud-Init*](../img/pve-os-builder-profile-cloudinit.png)
+4. **Kernel & Sysctl**: Optimize networking with TCP BBR Congestion Control, increase file limits, optimize swappiness, and enable SYN Flood Protection.
+   ![*Kernel Tuning*](../img/pve-os-builder-profile-kernel.png)
+5. **Hardening**: Automatically install Fail2ban, configure unattended security upgrades, change custom SSH ports, and run arbitrary Bash post-install scripts.
+   ![*Security Hardening*](../img/pve-os-builder-profile-hardening.png)
+
+### 🌍 5. Regional & Localization Groups
+
+To ensure fast performance globally, templates can be localized for specific regions.
+
+![*Localization Groups*](../img/pve-os-builder-localizations.png)
+
+![*Edit Localization Top*](../img/pve-os-builder-localization-edit-top.png)
+![*Edit Localization Bottom*](../img/pve-os-builder-localization-edit-bottom.png)
+
+- **Timezone & Locale**: Define system timezones (e.g., `Europe/Warsaw`, `America/Winnipeg`) and locales.
+- **Package Mirrors**: Speed up VM operations by hardcoding regional repository mirrors for `apt`, `dnf`/`yum`, `apk`, `pacman`, and `zypper`.
+- **Custom Scripts**: Run specific regional commands during the build phase.
+
+### 🏗️ 6. Proxmox Template Build Studio
+
+The Build Studio is where the magic happens. You can launch single builds or massive matrix pipelines.
+
+![*Build Studio*](../img/pve-os-builder-build-studio.png)
+
+#### Launching a Build Matrix
+Select multiple Base OS Images and multiple Regional Groups. The builder will automatically queue a matrix job (e.g., 5 Images × 6 Groups = 30 Builds) and increment the starting Proxmox VMID automatically.
 
 ![*Launch Matrix Build*](../img/pve-os-builder-launch-matrix.png)
 
-![*Build Console*](../img/pve-os-builder-build-console.png)
+*(For manual control, you can also launch a single build)*:
+![*Launch Single Build*](../img/pve-os-builder-launch-single.png)
 
-#### 4. Connect to Proxmox via NFS
-Once builds are complete, they are stored as standard `.vma.zst` archives. The best way to use them is to connect your Proxmox VE cluster to the Builder's built-in NFS server.
+#### Live Build Console
+Monitor the build process in real-time. The builder uses `virt-customize` and `guestfish` to inject configurations without booting the OS.
+
+![*Build Console*](../img/pve-os-builder-build-console.png)
+![*Build Progress*](../img/pve-os-builder-build-progress.png)
+![*Build Console Scrolled*](../img/pve-os-builder-build-console-scrolled.png)
+![*Build Console Output*](../img/pve-os-builder-build-console-2.png)
+
+### 📦 7. Ready Templates & Proxmox Storage
+
+Once builds are complete, they land in the Ready Templates Repository as standard `.vma.zst` Proxmox archives.
+
+![*Ready Templates*](../img/pve-os-builder-ready-templates.png)
+
+#### Public Web Mirror
+Provide your users or nodes with a read-only HTTP mirror to download templates via `wget`.
+
+![*Public Mirror*](../img/pve-os-builder-public-mirror.png)
+
+#### Zero-Download: Proxmox VE Native NFS Storage
+For the ultimate workflow, connect your Proxmox VE cluster directly to the container's built-in NFS server.
+
+![*Proxmox Storage Configuration*](../img/pve-os-builder-proxmox-storage.png)
 
 1. In Proxmox GUI, go to **Datacenter** → **Storage** → **Add** → **NFS**.
-2. Enter the **IP Address** of your Builder container.
+2. Enter the **IP Address** shown in the dashboard.
 3. Use `/export` as the Export path.
 4. Select **VZDump backup file** as the Content type.
+5. Your new templates will instantly appear in Proxmox ready for 1-click restore via `qmrestore` or the GUI!
 
+**Example: Adding NFS Storage in Proxmox VE**
 ![*Proxmox NFS Add Dialog*](../img/pve-os-builder-proxmox-nfs-add.png)
 
-Your new templates will instantly appear in Proxmox, ready for restore via `qmrestore` or the GUI!
-
+**Example: Instant access to Ready Templates inside Proxmox**
 ![*Proxmox Backups List*](../img/pve-os-builder-proxmox-backups-list.png)
 
 > [!IMPORTANT]
 > For full installation instructions, Docker Compose files, and detailed usage documentation of the builder itself, visit the **[PUQ PVE OS Builder GitHub Repository](https://github.com/puqcloud/PVE-OS-Builder)**.
 
----
 
 ## Manual Template Creation
 
